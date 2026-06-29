@@ -1,0 +1,728 @@
+/* =====================================
+   MS P O P Work Nagpur
+   Premium Theme - Part 1
+===================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f7fbff;
+color:#222;
+overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#eef8ff;
+}
+
+::-webkit-scrollbar-thumb{
+background:#43b0ff;
+border-radius:20px;
+}
+
+/* Header */
+
+.header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 8%;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+z-index:1000;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo img{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+background:white;
+
+padding:4px;
+
+}
+
+.logo h2{
+
+font-size:24px;
+
+color:#0099ff;
+
+}
+
+.logo p{
+
+font-size:14px;
+
+color:#666;
+
+}
+
+nav{
+
+display:flex;
+
+gap:25px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#333;
+
+transition:.3s;
+
+position:relative;
+
+}
+
+nav a:hover{
+
+color:#0099ff;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:3px;
+
+background:#00a2ff;
+
+transition:.3s;
+
+border-radius:20px;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/* HERO */
+
+.hero{
+
+position:relative;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+.hero-video{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+z-index:-2;
+
+}
+
+.overlay{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.overlay div{
+
+max-width:750px;
+
+}
+
+.overlay h1{
+
+font-size:55px;
+
+color:white;
+
+margin-bottom:20px;
+
+text-shadow:0 4px 10px rgba(0,0,0,.5);
+
+}
+
+.overlay h2{
+
+font-size:32px;
+
+color:#8fd3ff;
+
+margin-bottom:15px;
+
+}
+
+.overlay p{
+
+font-size:20px;
+
+color:white;
+
+margin-bottom:35px;
+
+}
+
+/* Buttons */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.call,
+
+.whatsapp{
+
+padding:15px 35px;
+
+border-radius:50px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+transition:.35s;
+
+font-size:18px;
+
+}
+
+.call{
+
+background:#0099ff;
+
+color:white;
+
+}
+
+.whatsapp{
+
+background:#25D366;
+
+color:white;
+
+}
+
+.call:hover,
+
+.whatsapp:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+/* ============================
+   CATEGORY SECTION
+============================ */
+
+.category,
+.services,
+.why,
+.location,
+.map{
+padding:80px 8%;
+}
+
+.category h2,
+.services h2,
+.why h2,
+.location h2,
+.map h2{
+text-align:center;
+font-size:38px;
+color:#0099ff;
+margin-bottom:40px;
+font-weight:700;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.35s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,153,255,.25);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.card h3{
+padding:18px;
+text-align:center;
+font-size:22px;
+color:#0099ff;
+}
+
+.card p{
+padding:0 18px 20px;
+text-align:center;
+color:#666;
+line-height:1.6;
+}
+
+/* ============================
+   SERVICES
+============================ */
+
+.services .card{
+padding:35px;
+text-align:center;
+font-size:20px;
+font-weight:bold;
+background:linear-gradient(135deg,#ffffff,#eef8ff);
+}
+
+/* ============================
+   WHY CHOOSE US
+============================ */
+
+.why .card{
+padding:30px;
+text-align:center;
+font-size:18px;
+font-weight:600;
+}
+
+/* ============================
+   LOCATION
+============================ */
+
+.location{
+background:#eef8ff;
+border-radius:25px;
+margin:50px 8%;
+}
+
+.location p{
+text-align:center;
+font-size:20px;
+line-height:2;
+color:#444;
+}
+
+/* ============================
+   MAP
+============================ */
+
+.map iframe{
+width:100%;
+height:400px;
+border:none;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+/* ============================
+   FOOTER
+============================ */
+
+footer{
+background:#0099ff;
+padding:45px 20px;
+text-align:center;
+color:#fff;
+margin-top:50px;
+}
+
+footer h3{
+font-size:30px;
+margin-bottom:15px;
+}
+
+footer p{
+font-size:17px;
+margin:8px 0;
+}
+
+/* ============================
+   ANIMATION
+============================ */
+
+.card{
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+/* ============================
+   MOBILE RESPONSIVE
+============================ */
+
+@media (max-width:991px){
+
+.header{
+flex-direction:column;
+padding:15px;
+}
+
+nav{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.logo{
+flex-direction:column;
+text-align:center;
+}
+
+.overlay h1{
+font-size:38px;
+}
+
+.overlay h2{
+font-size:26px;
+}
+
+.overlay p{
+font-size:17px;
+}
+
+.grid{
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+height:90vh;
+}
+
+.overlay h1{
+font-size:30px;
+}
+
+.overlay h2{
+font-size:22px;
+}
+
+.overlay p{
+font-size:16px;
+}
+
+.buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.call,
+.whatsapp{
+width:260px;
+text-align:center;
+}
+
+.category,
+.services,
+.why,
+.location,
+.map{
+padding:60px 5%;
+}
+
+.category h2,
+.services h2,
+.why h2,
+.location h2,
+.map h2{
+font-size:30px;
+}
+
+.card img{
+height:180px;
+}
+
+}
+
+/* ============================
+FLOATING BUTTONS
+============================ */
+
+.float-whatsapp{
+
+position:fixed;
+
+right:20px;
+
+bottom:20px;
+
+width:60px;
+
+height:60px;
+
+background:#25D366;
+
+color:#fff;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+font-size:30px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+.float-whatsapp:hover{
+
+transform:scale(1.1);
+
+}
+
+.float-call{
+
+position:fixed;
+
+left:20px;
+
+bottom:20px;
+
+width:60px;
+
+height:60px;
+
+background:#0099ff;
+
+color:#fff;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+font-size:28px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+.float-call:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ============================
+SECTION TITLE
+============================ */
+
+section h2{
+
+position:relative;
+
+display:inline-block;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding-bottom:10px;
+
+}
+
+section h2::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+bottom:0;
+
+width:80px;
+
+height:4px;
+
+background:#0099ff;
+
+border-radius:20px;
+
+}
+
+/* ============================
+SMOOTH IMAGE ZOOM
+============================ */
+
+.card img{
+
+transition:.4s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+/* ============================
+SELECTION COLOR
+============================ */
+
+::selection{
+
+background:#0099ff;
+
+color:#fff;
+
+}
+
+/* ============================
+END
+============================ */
